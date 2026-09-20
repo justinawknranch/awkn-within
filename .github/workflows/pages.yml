@@ -1,38 +1,34 @@
-name: Deploy to GitHub Pages
+name: Publish site
+
+# Pages for this repository is configured to serve the `gh-pages` branch, so
+# publishing is a matter of mirroring `main` onto it. Pushing to `gh-pages`
+# triggers GitHub's own "pages build and deployment" run, which serves the
+# files as-is (there is no build step, and .nojekyll disables Jekyll).
+#
+# This deliberately does not use actions/deploy-pages: the `github-pages`
+# environment only accepts deployments from the branch Pages is configured to
+# serve, so an Actions-based deploy from `main` is rejected before it starts.
 
 on:
   push:
     branches:
       - main
-      - claude/new-session-0ks2g2
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: publish-site
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          fetch-depth: 0
 
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Mirror main onto gh-pages
+        run: git push --force origin HEAD:refs/heads/gh-pages

@@ -32,24 +32,35 @@ carries both palettes and follows the visitor's system setting.
 
 ## Deployment
 
-Pushing to `main` builds and publishes the site through the
-`Deploy to GitHub Pages` workflow.
+GitHub Pages serves the **`gh-pages`** branch of this repository, mapped to
+`awknwithin.org` by the `CNAME` file.
 
-**One-time setup:** under **Settings → Pages → Build and deployment**, set
-**Source** to **GitHub Actions**. Until that is done every run fails at the
-`Configure Pages` step with *Get Pages site failed — Not Found*. The workflow
-cannot do this for itself: `GITHUB_TOKEN` is not permitted to create a Pages
-site, only to deploy to one that already exists.
+Pushing to `main` runs the `Publish site` workflow, which mirrors `main` onto
+`gh-pages`; that push in turn triggers GitHub's own *pages build and
+deployment*, which serves the files as they are. There is no build step, and
+`.nojekyll` keeps Jekyll out of the way.
 
-The `CNAME` file binds the site to `awknwithin.org`, which needs these DNS
-records at the domain registrar:
+To publish by hand:
+
+```sh
+git push --force origin main:gh-pages
+```
+
+Note the workflow does not use `actions/deploy-pages`. The `github-pages`
+environment only accepts deployments from whichever branch Pages is configured
+to serve, so an Actions-based deploy running on `main` is rejected before its
+first step. Mirroring the branch avoids that entirely.
+
+### DNS
+
+`awknwithin.org` needs these records at the registrar:
 
 | Type  | Name  | Value                                                      |
 |-------|-------|------------------------------------------------------------|
 | A     | `@`   | `185.199.108.153` `185.199.109.153` `185.199.110.153` `185.199.111.153` |
 | CNAME | `www` | `justinawknranch.github.io`                                  |
 
-Once DNS resolves, tick **Enforce HTTPS** in Settings → Pages.
+Once DNS resolves, tick **Enforce HTTPS** under Settings → Pages.
 
 ## Editing the copy
 
