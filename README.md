@@ -33,8 +33,13 @@ carries both palettes and follows the visitor's system setting.
 ## Deployment
 
 Pushing to `main` builds and publishes the site through the
-`Deploy to GitHub Pages` workflow. This requires **Settings → Pages → Build and
-deployment → Source: GitHub Actions** to be selected once for the repository.
+`Deploy to GitHub Pages` workflow.
+
+**One-time setup:** under **Settings → Pages → Build and deployment**, set
+**Source** to **GitHub Actions**. Until that is done every run fails at the
+`Configure Pages` step with *Get Pages site failed — Not Found*. The workflow
+cannot do this for itself: `GITHUB_TOKEN` is not permitted to create a Pages
+site, only to deploy to one that already exists.
 
 The `CNAME` file binds the site to `awknwithin.org`, which needs these DNS
 records at the domain registrar:
