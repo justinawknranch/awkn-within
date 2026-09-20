@@ -1,9 +1,10 @@
 name: Publish site
 
 # Pages for this repository is configured to serve the `gh-pages` branch, so
-# publishing is a matter of mirroring `main` onto it. Pushing to `gh-pages`
-# triggers GitHub's own "pages build and deployment" run, which serves the
-# files as-is (there is no build step, and .nojekyll disables Jekyll).
+# publishing means copying the site files from `main` onto it. Pushing to
+# `gh-pages` triggers GitHub's own "pages build and deployment" run, which
+# serves the tree as-is (there is no build step, and .nojekyll disables
+# Jekyll) -- which is why the repository-only files are removed first.
 #
 # This deliberately does not use actions/deploy-pages: the `github-pages`
 # environment only accepts deployments from the branch Pages is configured to
@@ -30,5 +31,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Mirror main onto gh-pages
-        run: git push --force origin HEAD:refs/heads/gh-pages
+      - name: Publish the site files to gh-pages
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Everything left in the tree is served at the site root, so drop the
+          # things that belong in the repository but not on the website.
+          rm -rf .github README.md
+          git add -A
+          git commit -m "Publish ${GITHUB_SHA}"
+          git push --force origin HEAD:refs/heads/gh-pages

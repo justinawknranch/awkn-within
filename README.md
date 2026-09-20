@@ -35,16 +35,11 @@ carries both palettes and follows the visitor's system setting.
 GitHub Pages serves the **`gh-pages`** branch of this repository, mapped to
 `awknwithin.org` by the `CNAME` file.
 
-Pushing to `main` runs the `Publish site` workflow, which mirrors `main` onto
-`gh-pages`; that push in turn triggers GitHub's own *pages build and
-deployment*, which serves the files as they are. There is no build step, and
+Pushing to `main` runs the `Publish site` workflow, which copies the site onto
+`gh-pages` (dropping `.github/` and `README.md`, which belong in the repository
+but not on the website); that push in turn triggers GitHub's own *pages build
+and deployment*, which serves the tree as it is. There is no build step, and
 `.nojekyll` keeps Jekyll out of the way.
-
-To publish by hand:
-
-```sh
-git push --force origin main:gh-pages
-```
 
 Note the workflow does not use `actions/deploy-pages`. The `github-pages`
 environment only accepts deployments from whichever branch Pages is configured
