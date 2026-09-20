@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AWKN Within — Ancient Wisdom Known Now</title>
+<meta name="description" content="AWKN Within is a spiritual community gathered in ceremony on sacred land in the Texas Hill Country. The awakening you seek is already within you, waiting to be known.">
+<link rel="canonical" href="https://awknwithin.org/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AWKN Within">
+<meta property="og:title" content="AWKN Within — Ancient Wisdom Known Now">
+<meta property="og:description" content="A sanctuary of communion and ceremony in the Texas Hill Country. The awakening you seek is already within you, waiting to be known.">
+<meta property="og:url" content="https://awknwithin.org/">
+<meta property="og:image" content="https://awknwithin.org/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AWKN Within — Ancient Wisdom · Known Now">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AWKN Within — Ancient Wisdom Known Now">
+<meta name="twitter:description" content="A sanctuary of communion and ceremony in the Texas Hill Country.">
+<meta name="twitter:image" content="https://awknwithin.org/assets/og.png">
+
+<meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1618" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/mark.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap">
+
+<style>
+  :root {
+    --ground: #faf8f5;
+    --parchment: #f3eee5;
+    --veil: #e9e1d2;
+    --ink: #2c2225;
+    --ink-soft: #6b6066;
+    --earth: #6b4c3b;
+    --gold: #a67a2e;
+    --gold-bright: #c9943e;
+    --line: #ddd3c1;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #1c1618;
+      --parchment: #241d1f;
+      --veil: #2c2225;
+      --ink: #f0e9df;
+      --ink-soft: #b3a89f;
+      --earth: #d3b08c;
+      --gold: #c9943e;
+      --gold-bright: #dbaa55;
+      --line: #3d3335;
+      --card: #241d1f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #1c1618;
+    --parchment: #241d1f;
+    --veil: #2c2225;
+    --ink: #f0e9df;
+    --ink-soft: #b3a89f;
+    --earth: #d3b08c;
+    --gold: #c9943e;
+    --gold-bright: #dbaa55;
+    --line: #3d3335;
+    --card: #241d1f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.75;
+    margin: 0;
+    padding-inline: 24px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 880px; margin: 0 auto; }
+
+  h1, h2, h3, .serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: 0;
+  }
+  p { margin: 0; }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  a:focus-visible, .cta:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    text-align: center;
+    padding-block: 84px 68px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+  }
+  .mark { width: 76px; height: 76px; }
+  .wordmark {
+    font-size: clamp(44px, 9vw, 76px);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .wordmark .within { color: var(--gold); font-style: italic; text-transform: none; letter-spacing: 0.04em; }
+  .meaning {
+    font-size: 13px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--earth);
+    font-weight: 400;
+  }
+  .invocation {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(22px, 3.6vw, 29px);
+    font-style: italic;
+    color: var(--ink-soft);
+    max-width: 30ch;
+    line-height: 1.4;
+  }
+  .hero-line {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: var(--ink-soft);
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .hero-line::before, .hero-line::after {
+    content: "";
+    width: 56px; height: 1px;
+    background: var(--line);
+  }
+
+  .cta {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ground);
+    background: var(--gold);
+    padding: 15px 34px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.25s ease;
+  }
+  .cta:hover { background: var(--gold-bright); }
+  .cta.ghost {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+  }
+  .cta.ghost:hover { background: var(--veil); }
+
+  /* ---- Sections ---- */
+  section { padding-block: 64px; border-top: 1px solid var(--line); }
+  .section-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
+  .section-head h2 { font-size: clamp(30px, 5vw, 40px); }
+  .lede { font-size: 18px; max-width: 62ch; color: var(--ink-soft); }
+
+  .credo {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .credo blockquote {
+    margin: 0;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(24px, 3.6vw, 30px);
+    font-style: italic;
+    line-height: 1.35;
+    color: var(--earth);
+    border-left: 2px solid var(--gold);
+    padding-left: 24px;
+  }
+  .credo-text { display: flex; flex-direction: column; gap: 18px; max-width: 60ch; }
+
+  /* ---- Beliefs ---- */
+  .beliefs { display: flex; flex-direction: column; }
+  .belief {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 28px;
+    padding-block: 28px;
+    border-top: 1px solid var(--line);
+    align-items: start;
+  }
+  .belief:first-of-type { border-top: none; padding-top: 0; }
+  .belief .word {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1.3;
+    padding-top: 2px;
+  }
+  .belief p { color: var(--ink-soft); max-width: 62ch; font-size: 16px; }
+  .belief p strong { color: var(--ink); font-weight: 400; }
+
+  /* ---- Practices ---- */
+  .practices { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .practice {
+    background: var(--parchment);
+    padding: 34px 32px 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .practice h3 { font-size: 25px; }
+  .practice .when {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .practice p { color: var(--ink-soft); font-size: 15.5px; }
+
+  /* ---- Ceremony form ---- */
+  .form-list { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .form-item { display: flex; flex-direction: column; gap: 10px; }
+  .form-item h3 { font-size: 22px; }
+  .form-item p { color: var(--ink-soft); font-size: 15px; }
+  .form-item .ord {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  /* ---- Land ---- */
+  .land-inner {
+    background: var(--veil);
+    padding: 52px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-radius: 2px;
+  }
+  .land-inner h2 { font-size: clamp(28px, 4.5vw, 36px); }
+  .land-inner p { max-width: 62ch; color: var(--ink-soft); }
+
+  /* ---- Path ---- */
+  .path { display: flex; flex-direction: column; gap: 0; }
+  .step {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 26px;
+    padding-block: 30px;
+    border-top: 1px solid var(--line);
+    align-items: start;
+  }
+  .step:first-of-type { border-top: none; }
+  .step-num {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 44px;
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .step h3 { font-size: 23px; margin-bottom: 8px; }
+  .step p { color: var(--ink-soft); max-width: 58ch; font-size: 15.5px; }
+
+  /* ---- Giving ---- */
+  .giving { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .giving-col { display: flex; flex-direction: column; gap: 14px; }
+  .giving-col h3 { font-size: 25px; }
+  .giving-col p { color: var(--ink-soft); font-size: 15.5px; max-width: 52ch; }
+
+  /* ---- Closing / footer ---- */
+  .closing {
+    text-align: center;
+    padding-block: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .closing h2 { font-size: clamp(30px, 5vw, 42px); max-width: 22ch; }
+  .closing .attraction {
+    color: var(--ink-soft);
+    max-width: 52ch;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+  }
+  footer {
+    border-top: 1px solid var(--line);
+    padding-block: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  footer .fine { max-width: 74ch; line-height: 1.7; }
+  footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: baseline; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    .credo { grid-template-columns: 1fr; gap: 28px; }
+    .practices { grid-template-columns: 1fr; }
+    .giving { grid-template-columns: 1fr; }
+    .form-list { grid-template-columns: 1fr; }
+    .belief { grid-template-columns: 1fr; gap: 6px; }
+    .step { grid-template-columns: 52px 1fr; gap: 18px; }
+    .land-inner { padding: 36px 26px; }
+    section { padding-block: 48px; }
+    .hero { padding-block: 60px 48px; }
+    .hero-line {
+      display: block;
+      text-align: center;
+      text-wrap: balance;
+      max-width: 100%;
+      line-height: 1.9;
+      font-size: 11.5px;
+      letter-spacing: 0.2em;
+    }
+    .hero-line::before, .hero-line::after { display: none; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero > * { animation: rise 0.9s ease both; }
+    .hero > *:nth-child(2) { animation-delay: 0.1s; }
+    .hero > *:nth-child(3) { animation-delay: 0.2s; }
+    .hero > *:nth-child(4) { animation-delay: 0.3s; }
+    .hero > *:nth-child(5) { animation-delay: 0.4s; }
+    .hero > *:nth-child(6) { animation-delay: 0.5s; }
+    @keyframes rise {
+      from { opacity: 0.01; transform: translateY(10px); }
+      to { opacity: 1; transform: none; }
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="hero">
+    <svg class="mark" viewBox="0 0 76 76" fill="none" aria-hidden="true">
+      <circle cx="38" cy="38" r="35" stroke="var(--gold)" stroke-width="1.4"/>
+      <circle cx="38" cy="38" r="22" stroke="var(--gold)" stroke-width="0.9" opacity="0.55"/>
+      <circle cx="38" cy="38" r="5.5" fill="var(--gold)"/>
+      <line x1="38" y1="3" x2="38" y2="14" stroke="var(--gold)" stroke-width="1.2"/>
+      <line x1="38" y1="62" x2="38" y2="73" stroke="var(--gold)" stroke-width="1.2"/>
+      <line x1="3" y1="38" x2="14" y2="38" stroke="var(--gold)" stroke-width="1.2"/>
+      <line x1="62" y1="38" x2="73" y2="38" stroke="var(--gold)" stroke-width="1.2"/>
+    </svg>
+    <h1 class="wordmark">AWKN <span class="within">Within</span></h1>
+    <p class="meaning">Ancient Wisdom &middot; Known Now</p>
+    <p class="invocation">The awakening you seek is not somewhere else. It is already within you, waiting to be known.</p>
+    <div class="hero-line">A Sanctuary of Communion &amp; Ceremony</div>
+    <a class="cta" href="#membership">Begin the Conversation</a>
+  </header>
+
+  <main>
+
+  <section aria-labelledby="who-we-are">
+    <div class="credo">
+      <blockquote>The door to the Divine opens inward.</blockquote>
+      <div class="credo-text">
+        <p class="eyebrow" id="who-we-are">Who We Are</p>
+        <p>AWKN Within is a spiritual community gathered around one conviction: that the Divine Creator does not reside in some distant place, but within each of us. Our name proclaims our purpose: to carry wisdom that is ancient into a form that can be known, understood, and lived now.</p>
+        <p>We gather in sacred ceremony on ranch land in the Texas Hill Country: in prayer, in song, in silence, and in sacrament, guided by the medicine carriers and lineages we hold in the highest honor.</p>
+        <p>We are not a retreat center, a clinic, or a wellness brand. We are a sanctuary: small by intention, bound by relationship, and open to those who feel called to walk with us.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="beliefs-h">
+    <div class="section-head">
+      <p class="eyebrow">Our Statement of Beliefs</p>
+      <h2 id="beliefs-h">What We Believe</h2>
+    </div>
+    <div class="beliefs">
+      <div class="belief">
+        <div class="word">Inward</div>
+        <p><strong>The inward journey is the most direct path we know to communion with the Divine.</strong> In the sacred states our ceremonies open, attention turns within, and what has long been held in the subconscious rises to be witnessed, explored, and understood.</p>
+      </div>
+      <div class="belief">
+        <div class="word">Release</div>
+        <p><strong>A human life accumulates layers of conditioning</strong>: fears, roles, wounds, and inherited beliefs. In ceremony these layers can be seen for what they are and released. What remains is the soul itself, and with it a remembering of why we came here.</p>
+      </div>
+      <div class="belief">
+        <div class="word">Evolution</div>
+        <p><strong>We are here for the evolution of our souls.</strong> Our sacraments do not perform this work for us; they reveal how it is to be done. Our purpose is to hold sacred and safe space in which that evolution can unfold, and to walk alongside one another as it does.</p>
+      </div>
+      <div class="belief">
+        <div class="word">Lineage</div>
+        <p><strong>This wisdom is ancient, and it was never lost, only forgotten.</strong> We honor the indigenous lineages and ancestors who carried these practices faithfully across generations so they would survive to reach us. This wisdom is not a relic to be studied from a distance, but a living knowing to be practiced now.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="practices-h">
+    <div class="section-head">
+      <p class="eyebrow">Our Practices</p>
+      <h2 id="practices-h">The Ways We Gather</h2>
+      <p class="lede">Every gathering is held within the life of the congregation, prepared for beforehand, integrated afterward, and open to our members. We honor the solstices and equinoxes with reverence, as our ancestors did.</p>
+    </div>
+    <div class="practices">
+      <div class="practice">
+        <p class="when">Monthly &middot; One Evening</p>
+        <h3>Community Ceremony</h3>
+        <p>The heartbeat of our community. An evening of shared ceremony, prayer, and song on the land, closed with a simple meal and a morning sharing circle. This is where community is made, and where new members first sit in circle.</p>
+      </div>
+      <div class="practice">
+        <p class="when">Multi-Day &middot; On the Land</p>
+        <h3>Sacred Retreats</h3>
+        <p>Retreats of several days for members ready to go deeper, held in a safe and carefully prepared container: preparation calls and meetings before arrival, ceremony and reflection on the land, shared meals, and organized integration afterward to support what opens during the retreat.</p>
+      </div>
+      <div class="practice">
+        <p class="when">By Invitation</p>
+        <h3>Private Ministerial Work</h3>
+        <p>For seasons of life that ask for undivided attention, such as grief, transition, or purpose, we offer private, held ceremony and counsel with our ministers, shaped entirely around one member's walk.</p>
+      </div>
+      <div class="practice">
+        <p class="when">Monthly &middot; Ongoing</p>
+        <h3>Integration Circles</h3>
+        <p>Insight that is not lived is not yet wisdom. Our monthly integration meetings help members carry what was received in ceremony into the ordinary hours of their lives, the place where the ancient becomes known now.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="container-h">
+    <div class="section-head">
+      <p class="eyebrow">The Container</p>
+      <h2 id="container-h">How We Hold Ceremony</h2>
+      <p class="lede">Ceremony at AWKN Within follows the ancient form: an opening prayer to the directions and of protection, the blessing and serving of the sacrament, and prayer and song under the direction of the medicine carrier leading the circle.</p>
+    </div>
+    <div class="form-list">
+      <div class="form-item">
+        <p class="ord">Before</p>
+        <h3>Preparation</h3>
+        <p>Every participant is known to us before ceremony. Pre-retreat calls and meetings with our ministry prepare each person for what is ahead: a written wellbeing screening, an intention conversation, and guidance for the days leading in. An intention is not a demand placed upon the medicine. It is an honest question carried into ceremony.</p>
+      </div>
+      <div class="form-item">
+        <p class="ord">During</p>
+        <h3>Watchful Care</h3>
+        <p>Facilitators remain present and attentive throughout, and at all times at least one remains awake, sober, and observing. No one departs during ceremony, and no sacrament ever leaves the ceremonial space.</p>
+      </div>
+      <div class="form-item">
+        <p class="ord">After</p>
+        <h3>Integration</h3>
+        <p>The morning sharing circle begins the true work. Organized integration follows every retreat: calls and circles in the weeks after, so the experiences that happen in ceremony are supported, understood, and carried into daily life.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="land-h">
+    <div class="land-inner">
+      <p class="eyebrow">The Land</p>
+      <h2 id="land-h">Where We Gather</h2>
+      <p>We practice on working ranch land in the Hill Country: under oak and cedar, beside the fire circle, within the temple and the dome. The land is not a backdrop to our ceremonies; it is a member of them. We tend it, we quiet ourselves on it, and we leave it better than we found it.</p>
+      <p>AWKN Within was founded in 2026 by Justin De La Cruz, who serves as Head Minister. Our ceremonies are conducted under the guidance of the medicine men and women whose lineages we honor as the living bridge between the ancient and the now.</p>
+    </div>
+  </section>
+
+  <section id="membership" aria-labelledby="membership-h">
+    <div class="section-head">
+      <p class="eyebrow">The Path</p>
+      <h2 id="membership-h">Becoming a Member</h2>
+      <p class="lede">Ceremony at AWKN Within is a practice of membership, not a purchase. We come to know each person before we sit in circle together, for your safety and for the integrity of the container we all share.</p>
+    </div>
+    <div class="path">
+      <div class="step">
+        <div class="step-num" aria-hidden="true">i</div>
+        <div>
+          <h3>Write to Us</h3>
+          <p>Tell us, in your own words, what draws you toward this work and toward community. There is no application to perform. Sincerity is the only requirement.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" aria-hidden="true">ii</div>
+        <div>
+          <h3>An Intention Conversation</h3>
+          <p>A member of our ministry will sit with you, by phone or on the land, to hear your story, share how we practice, and walk through our preparation and wellbeing screening together.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" aria-hidden="true">iii</div>
+        <div>
+          <h3>Enter the Circle</h3>
+          <p>New members are welcomed first at a community ceremony evening. From there, our deeper practices open in their own time, at the pace of trust, not the pace of a calendar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Contribution and giving">
+    <div class="giving">
+      <div class="giving-col">
+        <p class="eyebrow">Contribution</p>
+        <h3>How This Community Is Carried</h3>
+        <p>Our gatherings are sustained by member contributions, offered in the spirit of reciprocity. No one is turned from ceremony for lack of means. Contribution levels and our scholarship circle are shared with members during the intention conversation, never posted like a menu.</p>
+      </div>
+      <div class="giving-col">
+        <p class="eyebrow">Giving</p>
+        <h3>Support the Mission</h3>
+        <p>Friends and patrons sustain what contributions alone cannot: the land we practice on, the scholarship circle that keeps our doors open to all, and the quiet work of tending this community. If you feel called to give, write to us. We would love to talk.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="closing">
+    <svg class="mark" viewBox="0 0 76 76" fill="none" aria-hidden="true" style="width:44px;height:44px;">
+      <circle cx="38" cy="38" r="35" stroke="var(--gold)" stroke-width="1.4"/>
+      <circle cx="38" cy="38" r="5.5" fill="var(--gold)"/>
+    </svg>
+    <h2 class="serif">If something in you already knows, write to us.</h2>
+    <p class="attraction">We grow by attraction, not promotion. The greatest testimony to this work is the healing and the change in those who practice with us.</p>
+    <a class="cta ghost" href="mailto:hello@awknwithin.org">hello@awknwithin.org</a>
+  </div>
+
+  </main>
+
+  <footer>
+    <p class="fine">AWKN Within is a church and spiritual community. Participation in ceremony is available to members following our screening and preparation practices. Our practices are spiritual and religious in nature; they are not medical, psychiatric, or therapeutic services, and nothing on this page is an offer of treatment or a claim of health outcomes. Our full Statement of Beliefs is available to members and sincere inquirers upon request.</p>
+    <div class="row">
+      <span>&copy; AWKN Within &middot; Texas Hill Country</span>
+      <a href="mailto:hello@awknwithin.org">hello@awknwithin.org</a>
+    </div>
+  </footer>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Church",
+  "name": "AWKN Within",
+  "alternateName": "Ancient Wisdom Known Now",
+  "url": "https://awknwithin.org/",
+  "email": "hello@awknwithin.org",
+  "slogan": "The door to the Divine opens inward.",
+  "description": "A spiritual community gathered in ceremony on ranch land in the Texas Hill Country.",
+  "foundingDate": "2026",
+  "founder": { "@type": "Person", "name": "Justin De La Cruz", "jobTitle": "Head Minister" },
+  "areaServed": { "@type": "Place", "name": "Texas Hill Country" }
+}
+</script>
+
+</body>
+</html>

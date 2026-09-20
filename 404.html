@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Not Found — AWKN Within</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+<meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1618" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;500&display=swap">
+<style>
+  :root { --ground:#faf8f5; --ink:#2c2225; --ink-soft:#6b6066; --gold:#a67a2e; --veil:#e9e1d2; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --ground:#1c1618; --ink:#f0e9df; --ink-soft:#b3a89f; --gold:#c9943e; --veil:#2c2225; }
+  }
+  body {
+    background: var(--ground); color: var(--ink); margin: 0; padding: 24px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 300;
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center; gap: 24px;
+  }
+  svg { width: 56px; height: 56px; }
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400;
+    font-size: clamp(28px, 6vw, 40px); margin: 0; max-width: 20ch; line-height: 1.2;
+  }
+  p { color: var(--ink-soft); max-width: 40ch; margin: 0; font-size: 17px; line-height: 1.7; }
+  a.cta {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid var(--gold); padding: 14px 32px;
+    border-radius: 2px; text-decoration: none; transition: background 0.25s ease;
+  }
+  a.cta:hover { background: var(--veil); }
+</style>
+</head>
+<body>
+  <svg viewBox="0 0 76 76" fill="none" aria-hidden="true">
+    <circle cx="38" cy="38" r="35" stroke="var(--gold)" stroke-width="1.4"/>
+    <circle cx="38" cy="38" r="5.5" fill="var(--gold)"/>
+  </svg>
+  <h1>This path leads nowhere yet.</h1>
+  <p>The page you were looking for is not here. Return to the beginning, or write to us.</p>
+  <a class="cta" href="/">Return Home</a>
+</body>
+</html>
