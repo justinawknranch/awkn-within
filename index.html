@@ -6,30 +6,12 @@
 <title>AWKN Within — Ancient Wisdom Known Now</title>
 <meta name="description" content="AWKN Within is a spiritual community gathered in ceremony on sacred land in the Texas Hill Country. The awakening you seek is already within you, waiting to be known.">
 <link rel="canonical" href="https://awknwithin.org/">
-
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="AWKN Within">
 <meta property="og:title" content="AWKN Within — Ancient Wisdom Known Now">
 <meta property="og:description" content="A sanctuary of communion and ceremony in the Texas Hill Country. The awakening you seek is already within you, waiting to be known.">
 <meta property="og:url" content="https://awknwithin.org/">
-<meta property="og:image" content="https://awknwithin.org/assets/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="AWKN Within — Ancient Wisdom · Known Now">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AWKN Within — Ancient Wisdom Known Now">
-<meta name="twitter:description" content="A sanctuary of communion and ceremony in the Texas Hill Country.">
-<meta name="twitter:image" content="https://awknwithin.org/assets/og.png">
-
-<meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1c1618" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/mark.svg">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap">
-
+<meta name="theme-color" content="#faf8f5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 76'%3E%3Ccircle cx='38' cy='38' r='34' fill='none' stroke='%23a67a2e' stroke-width='4'/%3E%3Ccircle cx='38' cy='38' r='9' fill='%23a67a2e'/%3E%3C/svg%3E">
 <style>
   :root {
     --ground: #faf8f5;
@@ -70,8 +52,6 @@
     --card: #241d1f;
   }
 
-  * { box-sizing: border-box; }
-
   body {
     background: var(--ground);
     color: var(--ink);
@@ -100,11 +80,6 @@
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--gold);
-  }
-
-  a:focus-visible, .cta:focus-visible {
-    outline: 2px solid var(--gold);
-    outline-offset: 3px;
   }
 
   /* ---- Hero ---- */
@@ -302,10 +277,10 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    border-top: 1px solid var(--line);
   }
   .closing h2 { font-size: clamp(30px, 5vw, 42px); max-width: 22ch; }
   .closing .attraction {
+    font-size: 14px;
     color: var(--ink-soft);
     max-width: 52ch;
     font-style: italic;
@@ -336,17 +311,54 @@
     .land-inner { padding: 36px 26px; }
     section { padding-block: 48px; }
     .hero { padding-block: 60px 48px; }
-    .hero-line {
-      display: block;
-      text-align: center;
-      text-wrap: balance;
-      max-width: 100%;
-      line-height: 1.9;
-      font-size: 11.5px;
-      letter-spacing: 0.2em;
-    }
-    .hero-line::before, .hero-line::after { display: none; }
   }
+
+
+  /* ---- Photography ---- */
+  .photo-band { padding-block: 0 8px; border-top: none; }
+  .photo-band img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 2px;
+    display: block;
+  }
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
+  .gallery figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+  .gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 2px;
+    display: block;
+  }
+  .gallery figcaption {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 640px) {
+    .gallery { grid-template-columns: 1fr; }
+    .photo-band img { aspect-ratio: 16 / 10; }
+  }
+
+  .care-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 40px; }
+  .care-row figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+  .care-row img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 2px;
+    display: block;
+  }
+  .care-row figcaption {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 640px) { .care-row { grid-template-columns: 1fr; } }
 
   @media (prefers-reduced-motion: no-preference) {
     .hero > * { animation: rise 0.9s ease both; }
@@ -361,12 +373,13 @@
     }
   }
 </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap">
 </head>
 <body>
 
 <div class="page">
 
-  <header class="hero">
+  <div class="hero">
     <svg class="mark" viewBox="0 0 76 76" fill="none" aria-hidden="true">
       <circle cx="38" cy="38" r="35" stroke="var(--gold)" stroke-width="1.4"/>
       <circle cx="38" cy="38" r="22" stroke="var(--gold)" stroke-width="0.9" opacity="0.55"/>
@@ -377,31 +390,33 @@
       <line x1="62" y1="38" x2="73" y2="38" stroke="var(--gold)" stroke-width="1.2"/>
     </svg>
     <h1 class="wordmark">AWKN <span class="within">Within</span></h1>
-    <p class="meaning">Ancient Wisdom &middot; Known Now</p>
+    <p class="meaning">Ancient Wisdom · Known Now</p>
     <p class="invocation">The awakening you seek is not somewhere else. It is already within you, waiting to be known.</p>
     <div class="hero-line">A Sanctuary of Communion &amp; Ceremony</div>
     <a class="cta" href="#membership">Begin the Conversation</a>
-  </header>
+  </div>
 
-  <main>
-
-  <section aria-labelledby="who-we-are">
+  <section>
     <div class="credo">
       <blockquote>The door to the Divine opens inward.</blockquote>
       <div class="credo-text">
-        <p class="eyebrow" id="who-we-are">Who We Are</p>
+        <p class="eyebrow">Who We Are</p>
         <p>AWKN Within is a spiritual community gathered around one conviction: that the Divine Creator does not reside in some distant place, but within each of us. Our name proclaims our purpose: to carry wisdom that is ancient into a form that can be known, understood, and lived now.</p>
         <p>We gather in sacred ceremony on ranch land in the Texas Hill Country: in prayer, in song, in silence, and in sacrament, guided by the medicine carriers and lineages we hold in the highest honor.</p>
-        <p>Much of what happens here is healing. People come to us carrying grief, fear, and wounds long left unattended, and in ceremony those things are met at last: held in prayer, in song, and in the steady attention of people who know them. The healing we speak of is spiritual healing, of the soul and of the heart.</p>
         <p>We are not a retreat center, a clinic, or a wellness brand. We are a sanctuary: small by intention, bound by relationship, and open to those who feel called to walk with us.</p>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="beliefs-h">
+
+  <section class="photo-band" aria-label="The land">
+    <img src="images/land-aerial.jpg" alt="The fire circle from above, a ring of seats held in a clearing among the oaks" loading="lazy">
+  </section>
+
+  <section>
     <div class="section-head">
       <p class="eyebrow">Our Statement of Beliefs</p>
-      <h2 id="beliefs-h">What We Believe</h2>
+      <h2>What We Believe</h2>
     </div>
     <div class="beliefs">
       <div class="belief">
@@ -411,10 +426,6 @@
       <div class="belief">
         <div class="word">Release</div>
         <p><strong>A human life accumulates layers of conditioning</strong>: fears, roles, wounds, and inherited beliefs. In ceremony these layers can be seen for what they are and released. What remains is the soul itself, and with it a remembering of why we came here.</p>
-      </div>
-      <div class="belief">
-        <div class="word">Healing</div>
-        <p><strong>What is finally witnessed can begin to heal.</strong> Much of what a person carries has never been fully looked at, only managed. In the container of ceremony it can be seen, spoken, grieved, and set down. This healing is the work of the spirit rather than the work of medicine, and it moves at the pace of the soul, not the pace of a treatment plan.</p>
       </div>
       <div class="belief">
         <div class="word">Evolution</div>
@@ -427,40 +438,40 @@
     </div>
   </section>
 
-  <section aria-labelledby="practices-h">
+  <section>
     <div class="section-head">
       <p class="eyebrow">Our Practices</p>
-      <h2 id="practices-h">The Ways We Gather</h2>
-      <p class="lede">Every gathering is held within the life of the congregation, prepared for beforehand, integrated afterward, and open to our members. Each one is an occasion for healing, whether that healing arrives as grief, as clarity, as gratitude, or as rest. We honor the solstices and equinoxes with reverence, as our ancestors did.</p>
+      <h2>The Ways We Gather</h2>
+      <p class="lede">Every gathering is held within the life of the congregation, prepared for beforehand, integrated afterward, and open to our members. We honor the solstices and equinoxes with reverence, as our ancestors did.</p>
     </div>
     <div class="practices">
       <div class="practice">
-        <p class="when">Monthly &middot; One Evening</p>
+        <p class="when">Monthly · One Evening</p>
         <h3>Community Ceremony</h3>
         <p>The heartbeat of our community. An evening of shared ceremony, prayer, and song on the land, closed with a simple meal and a morning sharing circle. This is where community is made, and where new members first sit in circle.</p>
       </div>
       <div class="practice">
-        <p class="when">Multi-Day &middot; On the Land</p>
+        <p class="when">Multi-Day · On the Land</p>
         <h3>Sacred Retreats</h3>
         <p>Retreats of several days for members ready to go deeper, held in a safe and carefully prepared container: preparation calls and meetings before arrival, ceremony and reflection on the land, shared meals, and organized integration afterward to support what opens during the retreat.</p>
       </div>
       <div class="practice">
         <p class="when">By Invitation</p>
         <h3>Private Ministerial Work</h3>
-        <p>For seasons of life that ask for undivided attention, such as grief, a wound that will not close, transition, or purpose, we offer private, held ceremony and counsel with our ministers, shaped entirely around one member's walk.</p>
+        <p>For seasons of life that ask for undivided attention, such as grief, transition, or purpose, we offer private, held ceremony and counsel with our ministers, shaped entirely around one member's walk.</p>
       </div>
       <div class="practice">
-        <p class="when">Monthly &middot; Ongoing</p>
+        <p class="when">Monthly · Ongoing</p>
         <h3>Integration Circles</h3>
-        <p>Insight that is not lived is not yet wisdom. Our monthly integration meetings help members carry what was received in ceremony into the ordinary hours of their lives, so that what begins to heal in circle goes on healing at home. That is the place where the ancient becomes known now.</p>
+        <p>Insight that is not lived is not yet wisdom. Our monthly integration meetings help members carry what was received in ceremony into the ordinary hours of their lives, the place where the ancient becomes known now.</p>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="container-h">
+  <section>
     <div class="section-head">
       <p class="eyebrow">The Container</p>
-      <h2 id="container-h">How We Hold Ceremony</h2>
+      <h2>How We Hold Ceremony</h2>
       <p class="lede">Ceremony at AWKN Within follows the ancient form: an opening prayer to the directions and of protection, the blessing and serving of the sacrament, and prayer and song under the direction of the medicine carrier leading the circle.</p>
     </div>
     <div class="form-list">
@@ -477,43 +488,83 @@
       <div class="form-item">
         <p class="ord">After</p>
         <h3>Integration</h3>
-        <p>The morning sharing circle begins the true work. Organized integration follows every retreat: calls and circles in the weeks after, so the healing that opens in ceremony is supported, understood, and carried into daily life rather than left behind on the land.</p>
+        <p>The morning sharing circle begins the true work. Organized integration follows every retreat: calls and circles in the weeks after, so the experiences that happen in ceremony are supported, understood, and carried into daily life.</p>
+      </div>
+    </div>
+    <div class="care-row">
+      <figure>
+        <img src="images/held-in-sound.jpg" alt="A facilitator sounding a painted drum over a resting participant" loading="lazy">
+        <figcaption>Held in Sound</figcaption>
+      </figure>
+      <figure>
+        <img src="images/watchful-care.jpg" alt="A facilitator holding the hands of a resting participant by candlelight" loading="lazy">
+        <figcaption>Watchful Care</figcaption>
+      </figure>
+      <figure>
+        <img src="images/integration.jpg" alt="A minister sitting with a member in an integration conversation" loading="lazy">
+        <figcaption>Integration</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <p class="eyebrow">Those Who Hold the Space</p>
+      <h2>Our Facilitators</h2>
+    </div>
+    <div class="credo">
+      <blockquote>The living bridge between the ancient and the now.</blockquote>
+      <div class="credo-text">
+        <p>The facilitators who hold our circles are experienced in working with the sacraments, formed by years of practice, study, and their own walks with the medicine. They serve with reverence, and they carry deep respect for the indigenous practices and lineages from which this work descends.</p>
+        <p>We do not treat these traditions as techniques to borrow. We honor the medicine carriers, the medicine men and women whose knowledge reached us through generations of faithful keeping, and we hold their guidance at the center of how ceremony is conducted here. Every facilitator who holds space at AWKN Within is entrusted with that responsibility personally, and carries it as ministry, not as a role.</p>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="land-h">
+  <section>
     <div class="land-inner">
       <p class="eyebrow">The Land</p>
-      <h2 id="land-h">Where We Gather</h2>
+      <h2>Where We Gather</h2>
       <p>We practice on working ranch land in the Hill Country: under oak and cedar, beside the fire circle, within the temple and the dome. The land is not a backdrop to our ceremonies; it is a member of them. We tend it, we quiet ourselves on it, and we leave it better than we found it.</p>
-      <p>AWKN Within was founded in 2026 by Justin De La Cruz, who serves as Head Minister. Our ceremonies are conducted under the guidance of the medicine men and women whose lineages we honor as the living bridge between the ancient and the now.</p>
+      
+      <div class="gallery">
+        <figure>
+          <img src="images/ceremony-space.jpg" alt="The ceremony room, cushions set in circle around the fire and gong" loading="lazy">
+          <figcaption>The Ceremony Space</figcaption>
+        </figure>
+        <figure>
+          <img src="images/ceremony-circle.jpg" alt="Hands joined in circle around an offering of flowers" loading="lazy">
+          <figcaption>The Circle</figcaption>
+        </figure>
+      </div>
+
+      <p>Our ceremonies are conducted under the guidance of the medicine men and women whose lineages we honor as the living bridge between the ancient and the now.</p>
     </div>
   </section>
 
-  <section id="membership" aria-labelledby="membership-h">
+  <section id="membership">
     <div class="section-head">
       <p class="eyebrow">The Path</p>
-      <h2 id="membership-h">Becoming a Member</h2>
+      <h2>Becoming a Member</h2>
       <p class="lede">Ceremony at AWKN Within is a practice of membership, not a purchase. We come to know each person before we sit in circle together, for your safety and for the integrity of the container we all share.</p>
     </div>
     <div class="path">
       <div class="step">
-        <div class="step-num" aria-hidden="true">i</div>
+        <div class="step-num">i</div>
         <div>
           <h3>Write to Us</h3>
           <p>Tell us, in your own words, what draws you toward this work and toward community. There is no application to perform. Sincerity is the only requirement.</p>
         </div>
       </div>
       <div class="step">
-        <div class="step-num" aria-hidden="true">ii</div>
+        <div class="step-num">ii</div>
         <div>
           <h3>An Intention Conversation</h3>
           <p>A member of our ministry will sit with you, by phone or on the land, to hear your story, share how we practice, and walk through our preparation and wellbeing screening together.</p>
         </div>
       </div>
       <div class="step">
-        <div class="step-num" aria-hidden="true">iii</div>
+        <div class="step-num">iii</div>
         <div>
           <h3>Enter the Circle</h3>
           <p>New members are welcomed first at a community ceremony evening. From there, our deeper practices open in their own time, at the pace of trust, not the pace of a calendar.</p>
@@ -522,7 +573,7 @@
     </div>
   </section>
 
-  <section aria-label="Contribution and giving">
+  <section>
     <div class="giving">
       <div class="giving-col">
         <p class="eyebrow">Contribution</p>
@@ -547,33 +598,15 @@
     <a class="cta ghost" href="mailto:hello@awknwithin.org">hello@awknwithin.org</a>
   </div>
 
-  </main>
-
   <footer>
-    <p class="fine">AWKN Within is a church and spiritual community. Participation in ceremony is available to members following our screening and preparation practices. Our practices are spiritual and religious in nature; they are not medical, psychiatric, or therapeutic services, and nothing on this page is an offer of treatment or a claim of health outcomes. Where we speak of healing, we mean spiritual and emotional healing experienced within our religious practice; we do not diagnose, treat, or cure any condition, and we make no promise of any particular result. Our full Statement of Beliefs is available to members and sincere inquirers upon request.</p>
+    <p class="fine">AWKN Within is a church and spiritual community. Participation in ceremony is available to members following our screening and preparation practices. Our practices are spiritual and religious in nature; they are not medical, psychiatric, or therapeutic services, and nothing on this page is an offer of treatment or a claim of health outcomes. Our full Statement of Beliefs is available to members and sincere inquirers upon request.</p>
     <div class="row">
-      <span>&copy; AWKN Within &middot; Texas Hill Country</span>
+      <span>© AWKN Within · Texas Hill Country</span>
       <a href="mailto:hello@awknwithin.org">hello@awknwithin.org</a>
     </div>
   </footer>
 
 </div>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Church",
-  "name": "AWKN Within",
-  "alternateName": "Ancient Wisdom Known Now",
-  "url": "https://awknwithin.org/",
-  "email": "hello@awknwithin.org",
-  "slogan": "The door to the Divine opens inward.",
-  "description": "A spiritual community gathered in ceremony on ranch land in the Texas Hill Country.",
-  "foundingDate": "2026",
-  "founder": { "@type": "Person", "name": "Justin De La Cruz", "jobTitle": "Head Minister" },
-  "areaServed": { "@type": "Place", "name": "Texas Hill Country" }
-}
-</script>
 
 </body>
 </html>
