@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 76" fill="none" role="img" aria-label="AWKN Within">
+  <circle cx="38" cy="38" r="34" stroke="#a67a2e" stroke-width="4"/>
+  <circle cx="38" cy="38" r="21" stroke="#a67a2e" stroke-width="2.6" opacity="0.6"/>
+  <circle cx="38" cy="38" r="8" fill="#a67a2e"/>
+  <line x1="38" y1="4" x2="38" y2="15" stroke="#a67a2e" stroke-width="3.6" stroke-linecap="round"/>
+  <line x1="38" y1="61" x2="38" y2="72" stroke="#a67a2e" stroke-width="3.6" stroke-linecap="round"/>
+  <line x1="4" y1="38" x2="15" y2="38" stroke="#a67a2e" stroke-width="3.6" stroke-linecap="round"/>
+  <line x1="61" y1="38" x2="72" y2="38" stroke="#a67a2e" stroke-width="3.6" stroke-linecap="round"/>
+</svg>
