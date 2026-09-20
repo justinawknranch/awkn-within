@@ -17,7 +17,7 @@ robots.txt              crawl rules + sitemap pointer
 sitemap.xml             one entry, the homepage
 assets/mark.svg         the mark, used as favicon
 assets/og.png           1200x630 social preview card
-.github/workflows/      GitHub Pages deployment
+.github/workflows/      publishes main onto the gh-pages branch
 ```
 
 ## Working on it locally
