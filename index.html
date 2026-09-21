@@ -308,6 +308,8 @@
 
   @media (max-width: 640px) {
     .credo { grid-template-columns: 1fr; gap: 28px; }
+    .credo-aside img { aspect-ratio: 16 / 10; }
+    .practice img { margin: -34px -32px 6px; }
     .practices { grid-template-columns: 1fr; }
     .giving { grid-template-columns: 1fr; }
     .form-list { grid-template-columns: 1fr; }
@@ -327,6 +329,30 @@
     object-fit: cover;
     border-radius: 2px;
     display: block;
+  }
+  .credo-aside { display: flex; flex-direction: column; gap: 26px; }
+  .credo-aside img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 2px;
+    display: block;
+  }
+  .practice img {
+    width: calc(100% + 64px);
+    max-width: none;
+    margin: -34px -32px 6px;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+  }
+  .section-photo {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
+    border-radius: 2px;
+    display: block;
+    margin-bottom: 36px;
   }
   .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
   .gallery figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
@@ -403,7 +429,10 @@
 
   <section>
     <div class="credo">
-      <blockquote>The door to the Divine opens inward.</blockquote>
+      <div class="credo-aside">
+        <blockquote>The door to the Divine opens inward.</blockquote>
+        <img src="assets/land/temple-door.webp" alt="The temple door, standing open onto the room within" loading="lazy">
+      </div>
       <div class="credo-text">
         <p class="eyebrow">Who We Are</p>
         <p>AWKN Within is a spiritual community gathered around one conviction: that the Divine Creator does not reside in some distant place, but within each of us. Our name proclaims our purpose: to carry wisdom that is ancient into a form that can be known, understood, and lived now.</p>
@@ -461,21 +490,25 @@
     </div>
     <div class="practices">
       <div class="practice">
+        <img src="assets/land/fire-pit-960.webp" alt="Seats drawn into a ring around a lit fire, seen from above at dusk" loading="lazy">
         <p class="when">Monthly · One Evening</p>
         <h3>Community Ceremony</h3>
         <p>The heartbeat of our community. An evening of shared ceremony, prayer, and song on the land, closed with a simple meal and a morning sharing circle. Each one is an occasion for healing, whether that healing arrives as grief, as clarity, as gratitude, or as rest. This is where community is made, and where new members first sit in circle.</p>
       </div>
       <div class="practice">
+        <img src="assets/land/maloka-band-960.webp" alt="The dome lit from within at night, its doors open to the path" loading="lazy">
         <p class="when">Multi-Day · On the Land</p>
         <h3>Sacred Retreats</h3>
         <p>Retreats of several days for members ready to go deeper, held in a safe and carefully prepared container: preparation calls and meetings before arrival, ceremony and reflection on the land, shared meals, and organized integration afterward to support what opens during the retreat.</p>
       </div>
       <div class="practice">
+        <img src="assets/land/honey-dome.webp" alt="Two chairs and a low table in a small glass dome, the oaks beyond" loading="lazy">
         <p class="when">By Invitation</p>
         <h3>Private Ceremony &amp; Counsel</h3>
         <p>For seasons of life that ask for undivided attention, such as grief, transition, or purpose, we offer private, held ceremony and counsel with our ministers, shaped entirely around one member's walk.</p>
       </div>
       <div class="practice">
+        <img src="assets/land/sound-temple-960.webp" alt="Drums, bowls and a gong at rest in a candlelit room" loading="lazy">
         <p class="when">Monthly · Ongoing</p>
         <h3>Integration Circles</h3>
         <p>Insight that is not lived is not yet wisdom. Our monthly integration meetings help members carry what was received in ceremony into the ordinary hours of their lives, so that what begins to heal in circle goes on healing at home. That is the place where the ancient becomes known now.</p>
@@ -563,6 +596,7 @@
       <h2>Becoming a Member</h2>
       <p class="lede">Ceremony at AWKN Within is a practice of membership, not a purchase. We come to know each person before we sit in circle together, for your safety and for the integrity of the container we all share.</p>
     </div>
+    <img class="section-photo" src="assets/land/temple-exterior-960.webp" alt="A sunlit room looking out through wide windows into the oaks" loading="lazy">
     <div class="path">
       <div class="step">
         <div class="step-num">i</div>
