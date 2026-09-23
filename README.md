@@ -10,6 +10,7 @@ assets in this repository are what gets served.
 
 ```
 index.html              the site
+videos/hero.mp4         hero background video
 404.html                not-found page
 CNAME                   custom domain (awknwithin.org)
 .nojekyll               serve files as-is, no Jekyll processing
