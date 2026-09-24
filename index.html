@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AWKN Within</title>
-<meta name="description" content="AWKN Within is a spiritual community gathered in ceremony on sacred land in the Texas Hill Country. The awakening you seek is already within you, waiting to be known.">
+<meta name="description" content="AWKN Within is a nonprofit church and spiritual community gathered in ceremony on sacred land in the Texas Hill Country. The awakening you seek is already within you, waiting to be known.">
 <link rel="canonical" href="https://awknwithin.org/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AWKN Within — Ancient Wisdom Known Now">
@@ -195,6 +195,27 @@
   .section-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
   .section-head h2 { font-size: clamp(30px, 5vw, 40px); }
   .lede { font-size: 18px; max-width: 62ch; color: var(--ink-soft); }
+
+  .mission { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+  .mission-text {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(23px, 3.4vw, 30px);
+    line-height: 1.45;
+    max-width: 38ch;
+    text-wrap: pretty;
+  }
+  .mission-pillars {
+    list-style: none;
+    margin: 6px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    text-align: left;
+  }
+  .mission-pillars li { border-top: 1px solid var(--gold); padding-top: 14px; color: var(--ink-soft); font-size: 16px; }
+  .mission-pillars strong { display: block; color: var(--ink); font-weight: 500; margin-bottom: 4px; }
+  @media (max-width: 640px) { .mission-pillars { grid-template-columns: 1fr; gap: 20px; } }
 
   .credo {
     display: grid;
@@ -470,6 +491,16 @@
 
 <div class="page">
 
+  <section class="mission" aria-labelledby="mission-heading">
+    <p class="eyebrow" id="mission-heading">Our Mission</p>
+    <p class="mission-text">AWKN Within is a nonprofit church and spiritual community. Our mission is to hold sacred, safe space for communion with the Divine within, and to carry the ancient ceremonial wisdom of the lineages we honor into a form that can be known and lived now.</p>
+    <ul class="mission-pillars">
+      <li><strong>Communion &amp; Healing</strong>Gathering in ceremony, prayer, and song, so that what is carried can be witnessed and the soul can heal.</li>
+      <li><strong>Lineage &amp; Wisdom</strong>Honoring and preserving the indigenous practices, and the medicine carriers, through whom this wisdom reached us.</li>
+      <li><strong>Belonging &amp; Purpose</strong>Restoring kinship with one another and the living world, and walking together as each member remembers why they came.</li>
+    </ul>
+  </section>
+
   <section>
     <div class="credo">
       <div class="credo-aside">
@@ -691,7 +722,7 @@
   </div>
 
   <footer>
-    <p class="fine">AWKN Within is a church and spiritual community. Participation in ceremony is available to members following our screening and preparation practices. Our practices are spiritual and religious in nature; they are not medical, psychiatric, or therapeutic services, and nothing on this page is an offer of treatment or a claim of health outcomes. Where we speak of healing, we mean spiritual and emotional healing experienced within our religious practice; we do not diagnose, treat, or cure any condition, and we make no promise of any particular result. Our full Statement of Beliefs is available to members and sincere inquirers upon request.</p>
+    <p class="fine">AWKN Within is a nonprofit church and spiritual community. Participation in ceremony is available to members following our screening and preparation practices. Our practices are spiritual and religious in nature; they are not medical, psychiatric, or therapeutic services, and nothing on this page is an offer of treatment or a claim of health outcomes. Where we speak of healing, we mean spiritual and emotional healing experienced within our religious practice; we do not diagnose, treat, or cure any condition, and we make no promise of any particular result. Our full Statement of Beliefs is available to members and sincere inquirers upon request.</p>
     <div class="row">
       <span>© AWKN Within · Texas Hill Country</span>
       <a href="mailto:hello@awknwithin.org">hello@awknwithin.org</a>
